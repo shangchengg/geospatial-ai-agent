@@ -1,0 +1,27 @@
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Git
+.git/
+.gitignore
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local data mounted at runtime
+chroma_db/
+data/
+
+# Development outputs
+evaluation/
+*.log
+
+# IDE
+.vscode/
+.idea/

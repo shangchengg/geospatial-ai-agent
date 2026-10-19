@@ -1,0 +1,44 @@
+
+services:
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: geospatial-ollama
+    restart: unless-stopped
+
+    volumes:
+      - ollama_data:/root/.ollama
+
+    networks:
+      - geospatial-network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: geospatial-api
+    restart: unless-stopped
+
+    ports:
+      - "127.0.0.1:8000:8000"
+
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data:ro
+
+    depends_on:
+      - ollama
+
+    networks:
+      - geospatial-network
+
+volumes:
+  ollama_data:
+
+networks:
+  geospatial-network:
+    driver: bridge

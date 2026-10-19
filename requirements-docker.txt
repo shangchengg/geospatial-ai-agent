@@ -1,0 +1,28 @@
+
+# API
+fastapi
+uvicorn[standard]
+pydantic
+
+# LLM and Agent
+langchain-core
+langchain-ollama
+langgraph
+
+# RAG and Vector Database
+langchain-chroma
+chromadb
+
+# GIS
+geopandas
+pyogrio
+pandas
+shapely
+pyproj
+
+# Document processing
+pypdf
+langchain-text-splitters
+
+# Configuration
+python-dotenv
