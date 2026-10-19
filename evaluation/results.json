@@ -1,0 +1,186 @@
+[
+  {
+    "id": "Q01",
+    "type": "fact",
+    "question": "AGB模型使用了哪些LiDAR指标？",
+    "answer": "根据检索到的上下文，用于估计地上生物量（AGB）的 LiDAR 衍生指标包括：\n\n*   **zmax**\n*   **pzabove**\n*   **zcv**\n\n这些预测变量代表了树冠结构的互补方面，并且避免了相关指标之间的多重共线性问题 [Source: BrianLi_FinalReport_20260410.pdf, Page: 16]。",
+    "keyword_pass": false,
+    "sources": [
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 22
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 3
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 7
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 16
+      }
+    ],
+    "error": null,
+    "expected_pages": [
+      16,
+      17,
+      21
+    ],
+    "retrieved_pages": [
+      3,
+      7,
+      16,
+      22
+    ],
+    "retrieval_hit": true,
+    "needs_review": true
+  },
+  {
+    "id": "Q02",
+    "type": "numerical",
+    "question": "AGB模型的R平方、调整R平方和p值是多少？",
+    "answer": "根据检索到的上下文，关于 AGB 模型（生物量模型）的统计指标如下：\n\n*   **R 平方 (R square)**: 0.743 [Source: BrianLi_FinalReport_20260410.pdf, Page: 21]\n*   **调整 R 平方 (adjusted R square)**: 0.657 [Source: BrianLi_FinalReport_20260410.pdf, Page: 21]\n*   **p 值 (overall model significance)**: 0.005 [Source: BrianLi_FinalReport_20260410.pdf, Page: 21; 同时见 Page: 22]\n\n此外，文档还指出虽然整体模型在 0.05 水平上具有统计显著性，但单个预测变量（如 zmax, pzabove2, zcv）并未达到该水平的统计显著性 [Source: BrianLi_FinalReport_20260410.pdf, Page: 21]。",
+    "keyword_pass": true,
+    "sources": [
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 22
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 21
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 2
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 3
+      }
+    ],
+    "error": null,
+    "expected_pages": [
+      21,
+      22
+    ],
+    "retrieved_pages": [
+      2,
+      3,
+      21,
+      22
+    ],
+    "retrieval_hit": true,
+    "needs_review": false
+  },
+  {
+    "id": "Q03",
+    "type": "cross_language",
+    "question": "2019年和2024年土地覆盖分类总体精度分别是多少？",
+    "answer": "根据检索到的上下文，2019 年和 2024 年土地覆盖分类的总体精度（OA）如下：\n\n*   **2019 年**：总体精度为 **98.82%** [Source: BrianLi_FinalReport_20260410.pdf, Page: 13]。\n*   **2024 年**：总体精度为 **98.01%** [Source: BrianLi_FinalReport_20260410.pdf, Page: 13]。\n\n这些数据也列于表 6（Table 6）中，该表展示了平滑后的 2019 年和 2024 年 PlanetScope 土地覆盖分类的总体精度（OA）、生产者精度（PA）和用户精度（UA）[Source: BrianLi_FinalReport_20260410.pdf, Page: 14]。",
+    "keyword_pass": true,
+    "sources": [
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 14
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 13
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 11
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 12
+      }
+    ],
+    "error": null,
+    "expected_pages": [
+      13,
+      14
+    ],
+    "retrieved_pages": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "retrieval_hit": true,
+    "needs_review": false
+  },
+  {
+    "id": "Q04",
+    "type": "synthesis",
+    "question": "为什么稳定森林仍可能发生生物量变化？",
+    "answer": "根据检索到的上下文，稳定森林（stable forest）仍可能发生生物量变化的原因如下：\n\n1.  **持续的生长与发育**：在生态意义上，被分类为“稳定森林”的区域并非静止不变，而是通过**高度增长**（height growth）和**冠层发展**（canopy development）继续积累生物量 [Document 1, Page: 20]。\n2.  **结构内部的发展**：土地覆盖类型的转换（land-cover transition）为解释生物量变化提供了有用的背景，但**林分内部的结构性发展**（structural development within stands）同样很重要 [Document 1, Page: 20]。这意味着即使林分保持在同一类别中，其内部结构的变化也会导致生物量的增加。\n3.  **局部干扰或冠层密度降低**：尽管某些林分被归类为“稳定森林”，但其中可能包含因**干扰**（disturbance）或**冠层密度降低**（reduced canopy density）而导致局部生物量损失的区域 [Document 1, Page: 20]。\n4.  **关系并非一对一**：研究并未发现简单的“一对一”关系，即生物量变化与土地覆盖转换模式相关，但并非如此简单 [Document 3, Page: 20]。具有较高比例稳定森林的林分通常表现出中等程度的正生物量变化，但也存在变异性；而具有较低比例稳定森林的林分则显示出更大的生物量变化变异性，包括增益和损失 [Document 3, Page: 20]。\n\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 20]\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 19]\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 20]\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 18]",
+    "keyword_pass": null,
+    "sources": [
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 20
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 19
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 20
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 18
+      }
+    ],
+    "error": null,
+    "expected_pages": [],
+    "retrieved_pages": [
+      18,
+      19,
+      20
+    ],
+    "retrieval_hit": null,
+    "needs_review": false
+  },
+  {
+    "id": "Q05",
+    "type": "negative",
+    "question": "研究使用了Sentinel-1 SAR进行分类吗？",
+    "answer": "根据提供的检索上下文，**没有证据表明研究使用了 Sentinel-1 SAR（合成孔径雷达）数据进行分类**。\n\n文档中明确提到的数据源包括：\n*   **PlanetScope 影像**：用于提供光谱输入以进行土地覆盖分类 [Document 1, Page: 6]。\n*   **LiDAR 数据 (BC Lidar)**：2019 年和 2024 年的数据被列出，但上下文未明确说明其直接用于监督分类算法（尽管通常 LiDAR 可用于生物量建模或结构分析）[Document 1, Page: 6]。\n*   **植被资源调查 (BC Data catalog)**：2019 年和 2024 年的数据 [Document 1, Page: 6]。\n\n文档中**未提及**使用 Sentinel-1 SAR 数据，也未提及任何 SAR（合成孔径雷达）数据源。因此，基于现有文档，无法确认研究使用了 Sentinel-1 SAR 进行分类。\n\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 6]\n[Source: BrianLi_FinalReport_20260410.pdf, Page: 13]",
+    "keyword_pass": null,
+    "sources": [
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 6
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 13
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 11
+      },
+      {
+        "source": "BrianLi_FinalReport_20260410.pdf",
+        "page": 25
+      }
+    ],
+    "error": null,
+    "expected_pages": [],
+    "retrieved_pages": [
+      6,
+      11,
+      13,
+      25
+    ],
+    "retrieval_hit": null,
+    "needs_review": false
+  }
+]

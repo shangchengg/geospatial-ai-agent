@@ -1,0 +1,38 @@
+
+[
+  {
+    "id": "Q01",
+    "type": "fact",
+    "question": "AGB模型使用了哪些LiDAR指标？",
+    "expected_keywords": ["zmax", "pzabove2", "zcv"],
+    "expected_pages": [16, 17, 21],
+    "needs_review": true,
+    "review_note": "Original report uses pzabove as shorthand for pzabove2."
+  },
+  {
+    "id": "Q02",
+    "type": "numerical",
+    "question": "AGB模型的R平方、调整R平方和p值是多少？",
+    "expected_keywords": ["0.743", "0.657", "0.005"],
+    "expected_pages": [21, 22]
+  },
+  {
+    "id": "Q03",
+    "type": "cross_language",
+    "question": "2019年和2024年土地覆盖分类总体精度分别是多少？",
+    "expected_keywords": ["98.82%", "98.01%"],
+    "expected_pages": [13, 14]
+  },
+  {
+    "id": "Q04",
+    "type": "synthesis",
+    "question": "为什么稳定森林仍可能发生生物量变化？",
+    "expected_keywords": []
+  },
+  {
+    "id": "Q05",
+    "type": "negative",
+    "question": "研究使用了Sentinel-1 SAR进行分类吗？",
+    "expected_keywords": []
+  }
+]
