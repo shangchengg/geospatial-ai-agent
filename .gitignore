@@ -1,9 +1,67 @@
+# ========================================
+# Python virtual environment
+# ========================================
 .venv/
-.env
-__pycache__/
-*.pyc
+venv/
+env/
 
+# ========================================
+# Environment variables and secrets
+# ========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ========================================
+# Python cache
+# ========================================
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ========================================
+# Chroma vector database
+# ========================================
 chroma_db/
 
+# ========================================
+# Local research data
+# ========================================
 data/docs/*
 !data/docs/.gitkeep
+
+data/vector/*
+!data/vector/.gitkeep
+
+data/raster/*
+!data/raster/.gitkeep
+
+data/test/*
+!data/test/.gitkeep
+
+# ========================================
+# Generated evaluation results
+# ========================================
+evaluation/results.json
+evaluation/results_*.json
+
+# ========================================
+# Logs and temporary files
+# ========================================
+*.log
+*.tmp
+*.bak
+
+# ========================================
+# IDE / operating system
+# ========================================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+```
