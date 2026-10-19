@@ -1,4 +1,4 @@
-
+import os
 from langchain_ollama import ChatOllama
 from langchain_core.messages import (
     AIMessage,
@@ -17,6 +17,11 @@ from tools.gis_tools import (
 
 
 # 1. Configuration
+OLLAMA_BASE_URL = os.getenv(
+    "OLLAMA_BASE_URL",
+    "http://127.0.0.1:11434"
+)
+
 LLM_MODEL = "qwen3.5:4b"
 
 tools = [
@@ -29,6 +34,7 @@ tools = [
 # 2. Initialize local LLM
 llm = ChatOllama(
     model=LLM_MODEL,
+    base_url=OLLAMA_BASE_URL,
     temperature=0.1,
     reasoning=False,
     num_predict=2048,

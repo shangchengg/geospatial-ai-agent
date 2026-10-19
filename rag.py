@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 from langchain_chroma import Chroma
@@ -14,7 +15,10 @@ DB_DIR = BASE_DIR / "chroma_db"
 
 
 # Configuration
-
+OLLAMA_BASE_URL = os.getenv(
+    "OLLAMA_BASE_URL",
+    "http://127.0.0.1:11434"
+)
 EMBEDDING_MODEL = "qwen3-embedding:0.6b"
 LLM_MODEL = "qwen3.5:4b"
 TOP_K = 4
@@ -23,9 +27,9 @@ TOP_K = 4
 # Load embedding model
 
 embeddings = OllamaEmbeddings(
-    model=EMBEDDING_MODEL
+    model=EMBEDDING_MODEL,
+    base_url=OLLAMA_BASE_URL
 )
-
 
 # Load Chroma vector database
 
@@ -43,6 +47,7 @@ llm = ChatOllama(
     temperature=0.2,
     reasoning=False,
     num_predict=1024,
+    base_url=OLLAMA_BASE_URL,
 )
 
 
